@@ -2,16 +2,16 @@
     <div class="sidebar-inner slimscroll">
       <div id="sidebar-menu" class="sidebar-menu">
         <ul>
-          <li class="active">
+          <li class="">
             <a href="index.html"
-              ><img src="assets/img/icons/dashboard.svg" alt="img" /><span>
+              ><img src="{{ asset("assets/img/icons/dashboard.svg") }}" alt="img" /><span>
                 Dashboard</span
               >
             </a>
           </li>
           <li class="submenu">
             <a href="javascript:void(0);"
-              ><img src="assets/img/icons/product.svg" alt="img" /><span
+              ><img src="{{ asset("assets/img/icons/product.svg") }}" alt="img" /><span
                 >Menu</span
               >
               <span class="menu-arrow"></span
@@ -24,7 +24,7 @@
           </li>
           <li class="submenu">
             <a href="javascript:void(0);"
-              ><img src="assets/img/icons/sales1.svg" alt="img" /><span
+              ><img src="{{ asset("assets/img/icons/sales1.svg") }}" alt="img" /><span
                 >Inventory</span
               >
               <span class="menu-arrow"></span
@@ -42,7 +42,7 @@
           </li>
           <li class="submenu">
             <a href="javascript:void(0);"
-              ><img src="assets/img/icons/expense1.svg" alt="img" /><span
+              ><img src="{{ asset("assets/img/icons/expense1.svg") }}" alt="img" /><span
                 >Expenses</span
               >
               <span class="menu-arrow"></span
@@ -53,7 +53,7 @@
           </li>
           <li class="submenu">
             <a href="javascript:void(0);"
-              ><img src="assets/img/icons/purchase1.svg" alt="img" /><span
+              ><img src="{{ asset("assets/img/icons/purchase1.svg") }}" alt="img" /><span
                 >Orders</span
               >
               <span class="menu-arrow"></span
@@ -64,7 +64,7 @@
           </li>
           <li class="submenu">
             <a href="javascript:void(0);"
-              ><img src="assets/img/icons/purchase1.svg" alt="img" /><span
+              ><img src="{{ asset("assets/img/icons/purchase1.svg") }}" alt="img" /><span
                 >Reservation</span
               >
               <span class="menu-arrow"></span
@@ -75,7 +75,7 @@
           </li>
           <li class="submenu">
             <a href="javascript:void(0);"
-              ><img src="assets/img/icons/quotation1.svg" alt="img" /><span
+              ><img src="{{ asset("assets/img/icons/quotation1.svg") }}" alt="img" /><span
                 >Point of Sales</span
               >
               <span class="menu-arrow"></span
@@ -86,7 +86,7 @@
           </li>
           <li class="submenu">
             <a href="javascript:void(0);"
-              ><img src="assets/img/icons/transcation.svg" alt="img" /><span
+              ><img src="{{ asset("assets/img/icons/transcation.svg") }}" alt="img" /><span
                 >Transaction</span
               >
               <span class="menu-arrow"></span
@@ -110,7 +110,7 @@
 
           <li class="submenu">
             <a href="javascript:void(0);"
-              ><img src="assets/img/icons/time.svg" alt="img" /><span
+              ><img src="{{ asset("assets/img/icons/time.svg") }}" alt="img" /><span
                 >Sales</span
               >
               <span class="menu-arrow"></span
@@ -123,7 +123,7 @@
           </li>
           <li class="submenu">
             <a href="javascript:void(0);"
-              ><img src="assets/img/icons/places.svg" alt="img" /><span
+              ><img src="{{ asset("assets/img/icons/places.svg") }}" alt="img" /><span
                 >Branch</span
               >
               <span class="menu-arrow"></span
@@ -134,7 +134,7 @@
           </li>
           <li class="submenu">
             <a href="javascript:void(0);"
-              ><img src="assets/img/icons/users1.svg" alt="img" /><span
+              ><img src="{{ asset("assets/img/icons/users1.svg") }}" alt="img" /><span
                 >Users</span
               >
               <span class="menu-arrow"></span

@@ -8,7 +8,7 @@
                     <h6>Manage your User</h6>
                 </div>
                 <div class="page-btn">
-                    <a href="newuser.html" class="btn btn-added"><img src="assets/img/icons/plus.svg" alt="img" />Add
+                    <a href="{{ route('staffs.create') }}" class="btn btn-added"><img src="assets/img/icons/plus.svg" alt="img" />Add
                         User</a>
                 </div>
             </div>
@@ -92,254 +92,34 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Phone</th>
                                     <th>Email</th>
                                     <th>Role</th>
-                                    <th>Username</th>
+                                    {{-- <th>Username</th> --}}
                                     <th>Password</th>
-                                    <th>Account Status</th>
+                                    {{-- <th>Account Status</th> --}}
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($staffUsers as $staffUser)
                                 <tr>
-                                    <td>Thomas D</td>
-                                    <td>09245367219</td>
-                                    <td>Thomas@gmail.com</td>
-                                    <td>Admin</td>
-                                    <td>thomusername</td>
-                                    <td>password</td>
+                                    <td>{{ $staffUser->firstname }}{{ $staffUser->lastname }}/td>
+                                    <td>{{ $staffUser->user->email }}</td>
+                                    <td>{{ $staffUser->role }}</td>
+                                    {{-- <td>{{ $staffUser->user->username }}</td> --}}
+                                    <td>{{ $staffUser->user->password }}</td>
+                                    {{-- <td>{{ $staffUser }}</td> --}}
                                     <td><span class="bg-lightgreen badges">Active</span></td>
                                     <td>
                                         <a class="me-3" href="newuseredit.html">
-                                            <img src="assets/img/icons/edit.svg" alt="img" />
+                                            <img src="{{ asset("assets/img/icons/edit.svg ")}}" alt="img" />
                                         </a>
                                         <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="assets/img/icons/delete.svg" alt="img" />
+                                            <img src="{{ asset("assets/img/icons/delete.svg") }}" alt="img" />
                                         </a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>Benjamin B. Please</td>
-                                    <td>09563813648</td>
-                                    <td>Benjamin@gmail.com</td>
-                                    <td>Manager</td>
-                                    <td>benjuser</td>
-                                    <td>password</td>
-                                    <td><span class="bg-lightred badges">Locked</span></td>
-                                    <td>
-                                        <a class="me-3" href="newuseredit.html">
-                                            <img src="assets/img/icons/edit.svg" alt="img" />
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="assets/img/icons/delete.svg" alt="img" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>James</td>
-                                    <td>09245367219</td>
-                                    <td>James@gmail.com</td>
-                                    <td>Salesman</td>
-                                    <td>james8er</td>
-                                    <td>password</td>
-                                    <td><span class="bg-lightred badges">Locked</span></td>
-                                    <td>
-                                        <a class="me-3" href="newuseredit.html">
-                                            <img src="assets/img/icons/edit.svg" alt="img" />
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="assets/img/icons/delete.svg" alt="img" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>James</td>
-                                    <td>09245367219</td>
-                                    <td>James@gmail.com</td>
-                                    <td>Salesman</td>
-                                    <td>jameyr</td>
-                                    <td>password</td>
-                                    <td><span class="bg-lightred badges">Locked</span></td>
-                                    <td>
-                                        <a class="me-3" href="newuseredit.html">
-                                            <img src="assets/img/icons/edit.svg" alt="img" />
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="assets/img/icons/delete.svg" alt="img" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Bruklin</td>
-                                    <td>09563813648</td>
-                                    <td>Bruklin@gmail.com</td>
-                                    <td>Delivery Biker</td>
-                                    <td>bruksuser</td>
-                                    <td>password</td>
-                                    <td><span class="bg-lightgreen badges">Active</span></td>
-                                    <td>
-                                        <a class="me-3" href="newuseredit.html">
-                                            <img src="assets/img/icons/edit.svg" alt="img" />
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="assets/img/icons/delete.svg" alt="img" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Beverly</td>
-                                    <td>09245367219</td>
-                                    <td>Beverly@gmail.com</td>
-                                    <td>Delivery Biker</td>
-                                    <td>beve</td>
-                                    <td>password</td>
-                                    <td><span class="bg-lightgreen badges">Active</span></td>
-                                    <td>
-                                        <a class="me-3" href="newuseredit.html">
-                                            <img src="assets/img/icons/edit.svg" alt="img" />
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="assets/img/icons/delete.svg" alt="img" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Hanna</td>
-                                    <td>09563813648</td>
-                                    <td>Hanna@gmail.com</td>
-                                    <td>Sales Executive</td>
-                                    <td>hana</td>
-                                    <td>password</td>
-                                    <td><span class="bg-lightgreen badges">Active</span></td>
-                                    <td>
-                                        <a class="me-3" href="newuseredit.html">
-                                            <img src="assets/img/icons/edit.svg" alt="img" />
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="assets/img/icons/delete.svg" alt="img" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Thomas</td>
-                                    <td>09245367219</td>
-                                    <td>Thomas@gmail.com</td>
-                                    <td>Admin</td>
-                                    <td>tom</td>
-                                    <td>password</td>
-                                    <td><span class="bg-lightgreen badges">Active</span></td>
-                                    <td>
-                                        <a class="me-3" href="newuseredit.html">
-                                            <img src="assets/img/icons/edit.svg" alt="img" />
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="assets/img/icons/delete.svg" alt="img" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Benjamin</td>
-                                    <td>09563813648</td>
-                                    <td>Benjamin@gmail.com</td>
-                                    <td>Manager</td>
-                                    <td>benjus</td>
-                                    <td>password</td>
-                                    <td><span class="bg-lightred badges">Locked</span></td>
-                                    <td>
-                                        <a class="me-3" href="newuseredit.html">
-                                            <img src="assets/img/icons/edit.svg" alt="img" />
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="assets/img/icons/delete.svg" alt="img" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>James</td>
-                                    <td>09245367219</td>
-                                    <td>James@gmail.com</td>
-                                    <td>Salesman</td>
-                                    <td>usrer</td>
-                                    <td>password</td>
-                                    <td><span class="bg-lightred badges">Locked</span></td>
-                                    <td>
-                                        <a class="me-3" href="newuseredit.html">
-                                            <img src="assets/img/icons/edit.svg" alt="img" />
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="assets/img/icons/delete.svg" alt="img" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>James</td>
-                                    <td>09245367219</td>
-                                    <td>James@gmail.com</td>
-                                    <td>Salesman</td>
-                                    <td>username</td>
-                                    <td>password</td>
-                                    <td><span class="bg-lightred badges">Locked</span></td>
-                                    <td>
-                                        <a class="me-3" href="newuseredit.html">
-                                            <img src="assets/img/icons/edit.svg" alt="img" />
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="assets/img/icons/delete.svg" alt="img" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Bruklin</td>
-                                    <td>09563813648</td>
-                                    <td>Bruklin@gmail.com</td>
-                                    <td>Delivery Biker</td>
-                                    <td>usernameko</td>
-                                    <td>password</td>
-                                    <td><span class="bg-lightgreen badges">Active</span></td>
-                                    <td>
-                                        <a class="me-3" href="newuseredit.html">
-                                            <img src="assets/img/icons/edit.svg" alt="img" />
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="assets/img/icons/delete.svg" alt="img" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Beverly</td>
-                                    <td>09245367219</td>
-                                    <td>Beverly@gmail.com</td>
-                                    <td>Delivery Biker</td>
-                                    <td>usernameko</td>
-                                    <td>password</td>
-                                    <td><span class="bg-lightgreen badges">Active</span></td>
-                                    <td>
-                                        <a class="me-3" href="newuseredit.html">
-                                            <img src="assets/img/icons/edit.svg" alt="img" />
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="assets/img/icons/delete.svg" alt="img" />
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Hanna</td>
-                                    <td>09563813648</td>
-                                    <td>Hanna@gmail.com</td>
-                                    <td>Sales Executive</td>
-                                    <td>usgfer</td>
-                                    <td>password</td>
-                                    <td><span class="bg-lightgreen badges">Active</span></td>
-                                    <td>
-                                        <a class="me-3" href="newuseredit.html">
-                                            <img src="assets/img/icons/edit.svg" alt="img" />
-                                        </a>
-                                        <a class="me-3 confirm-text" href="javascript:void(0);">
-                                            <img src="assets/img/icons/delete.svg" alt="img" />
-                                        </a>
-                                    </td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

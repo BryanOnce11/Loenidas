@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AuthController;
+use App\Models\StaffUser;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +17,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin.staffUser');
+    $staffUsers = StaffUser::with('user')->get();
+    return view("admin.staffUser", compact("staffUsers"));
+});
+
+route::resource('/staffs','App\Http\Controllers\StaffUserController');
+route::resource('/inventory','App\Http\Controllers\InventoryController');
+
+
+route::controller(AuthController::class)->group(function () {
+    Route::get('/signin','signin')->name('signin');
+    Route::post('/signin_store', 'signin_store')->name('signin.store');
+    Route::get('logout','logout')->name('logout');
 });

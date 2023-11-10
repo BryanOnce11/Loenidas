@@ -1,10 +1,10 @@
 <div class="header">
     <div class="header-left active">
       <a href="index.html" class="logo">
-        <img src="assets/img/logo.png" alt="" />
+        <img src="{{ asset("assets/img/logo.png") }}" alt="" />
       </a>
       <a href="index.html" class="logo-small">
-        <img src="assets/img/logo-small.png" alt="" />
+        <img src="{{ asset("assets/img/logo-small.png") }}" alt="" />
       </a>
       <a id="toggle_btn" href="javascript:void(0);"> </a>
     </div>
@@ -25,7 +25,7 @@
           href="javascript:void(0);"
           role="button"
         >
-          <img src="assets/img/flags/branch.png" alt="" height="20" />
+          <img src="{{ asset("assets/img/flags/branch.png") }}" alt="" height="20" />
         </a>
       </li>
 
@@ -35,7 +35,7 @@
           class="dropdown-toggle nav-link"
           data-bs-toggle="dropdown"
         >
-          <img src="assets/img/icons/notification-bing.svg" alt="img" />
+          <img src="{{ asset("assets/img/icons/notification-bing.svg") }}" alt="img" />
           <span class="badge rounded-pill">4</span>
         </a>
         <div class="dropdown-menu notifications">
@@ -49,7 +49,7 @@
                 <a href="activities.html">
                   <div class="media d-flex">
                     <span class="avatar flex-shrink-0">
-                      <img alt="" src="assets/img/profiles/avatar-02.jpg" />
+                      <img alt="" src="{{ asset("assets/img/profiles/avatar-02.jpg") }}" />
                     </span>
                     <div class="media-body flex-grow-1">
                       <p class="noti-details">
@@ -70,7 +70,7 @@
                 <a href="activities.html">
                   <div class="media d-flex">
                     <span class="avatar flex-shrink-0">
-                      <img alt="" src="assets/img/profiles/avatar-03.jpg" />
+                      <img alt="" src="{{ asset("assets/img/profiles/avatar-03.jpg") }}" />
                     </span>
                     <div class="media-body flex-grow-1">
                       <p class="noti-details">
@@ -91,7 +91,7 @@
                 <a href="activities.html">
                   <div class="media d-flex">
                     <span class="avatar flex-shrink-0">
-                      <img alt="" src="assets/img/profiles/avatar-06.jpg" />
+                      <img alt="" src="{{ asset("assets/img/profiles/avatar-06.jpg") }}" />
                     </span>
                     <div class="media-body flex-grow-1">
                       <p class="noti-details">
@@ -114,7 +114,7 @@
                 <a href="activities.html">
                   <div class="media d-flex">
                     <span class="avatar flex-shrink-0">
-                      <img alt="" src="assets/img/profiles/avatar-17.jpg" />
+                      <img alt="" src="{{ asset("assets/img/profiles/avatar-17.jpg") }}" />
                     </span>
                     <div class="media-body flex-grow-1">
                       <p class="noti-details">
@@ -135,7 +135,7 @@
                 <a href="activities.html">
                   <div class="media d-flex">
                     <span class="avatar flex-shrink-0">
-                      <img alt="" src="assets/img/profiles/avatar-13.jpg" />
+                      <img alt="" src="{{ asset("assets/img/profiles/avatar-13.jpg") }}" />
                     </span>
                     <div class="media-body flex-grow-1">
                       <p class="noti-details">
@@ -165,7 +165,7 @@
           data-bs-toggle="dropdown"
         >
           <span class="user-img"
-            ><img src="assets/img/profiles/avator1.jpg" alt="" />
+            ><img src="{{ asset("assets/img/profiles/avator1.jp") }}g" alt="" />
             <span class="status online"></span
           ></span>
         </a>
@@ -173,7 +173,7 @@
           <div class="profilename">
             <div class="profileset">
               <span class="user-img"
-                ><img src="assets/img/profiles/avator1.jpg" alt="" />
+                ><img src="{{ asset("assets/img/profiles/avator1.jp") }}g" alt="" />
                 <span class="status online"></span
               ></span>
               <div class="profilesets">
@@ -191,7 +191,7 @@
             <hr class="m-0" />
             <a class="dropdown-item logout pb-0" href="signin.html"
               ><img
-                src="assets/img/icons/log-out.svg"
+                src="{{ asset("assets/img/icons/log-out.svg") }}"
                 class="me-2"
                 alt="img"
               />Logout</a

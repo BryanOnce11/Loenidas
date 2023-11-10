@@ -11,12 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('inventories', function (Blueprint $table) {
             $table->id();
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('stockName');
+            $table->integer('quantity');
+            $table->enum('unit', ['Kilogram', 'Gram', 'Pieces']);
+            $table->integer('unitCost');
+            $table->integer('reorderPoint');
+            $table->enum('status', ['Cart', 'Inventory'])->default('Cart');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('inventories');
     }
 };
