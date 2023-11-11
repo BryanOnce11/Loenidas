@@ -11,6 +11,7 @@ class Inventory extends Model
 
     protected $fillable = [
         "stockName",
+        "category",
         "quantity",
         "unit",
         "unitCost",

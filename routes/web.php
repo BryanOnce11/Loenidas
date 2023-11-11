@@ -17,8 +17,7 @@ use App\Models\StaffUser;
 */
 
 Route::get('/', function () {
-    $staffUsers = StaffUser::with('user')->get();
-    return view("admin.staffUser", compact("staffUsers"));
+    return view("admin.inventoryStatus");
 });
 
 route::resource('/staffs','App\Http\Controllers\StaffUserController');

@@ -13,7 +13,8 @@ class InventoryController extends Controller
      */
     public function index()
     {
-        //
+        $inventories = Inventory::all();
+        return view("admin.inventoryStatus", compact("inventories"));
     }
 
     /**
@@ -29,7 +30,10 @@ class InventoryController extends Controller
      */
     public function store(StoreInventoryRequest $request)
     {
-        //
+        $validatedData = $request->validated();
+        Inventory::create($validatedData);
+
+        return back();
     }
 
     /**

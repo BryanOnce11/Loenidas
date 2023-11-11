@@ -11,7 +11,7 @@ class StoreInventoryRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,12 @@ class StoreInventoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            "stockName"=> "required|string",
+            "category"=> "required|in:Meat,Fish",
+            "quantity"=> "required|integer",
+            "unit"=> "required|in:Kilogram,Gram,Pieces",
+            "unitCost"=> "required|integer",
+            "reorderPoint"=> "required|integer"
         ];
     }
 }

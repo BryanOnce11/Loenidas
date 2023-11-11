@@ -140,7 +140,7 @@
               <span class="menu-arrow"></span
             ></a>
             <ul>
-              <li><a href="userlists.html">Users List</a></li>
+              <li><a href="{{ route("staffs.index") }}">Users List</a></li>
             </ul>
           </li>
         </ul>
